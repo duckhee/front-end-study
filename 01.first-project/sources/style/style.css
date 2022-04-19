@@ -1,9 +1,12 @@
 /* encoding setting */
+
 @charset "UTF-8";
 
 /* utility style setting */
 
+
 /* 스크린 리더 적용 */
+
 .sr-only {
     position: absolute;
     left: -100000px;
@@ -13,7 +16,9 @@
     overflow: hidden;
 }
 
+
 /* 한줄 말줄임 */
+
 .sl-ellipsis {
     display: block;
     white-space: nowrap;
@@ -21,14 +26,38 @@
     text-overflow: ellipsis;
 }
 
+
 /* 두줄 말줄임 */
+
 .multi-ellipsis {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* 두줄 보여주기 설정 */
+    -webkit-line-clamp: 2;
+    /* 두줄 보여주기 설정 */
     -webkit-box-orient: vertical;
     /* 실험적인 기능은 -webkit 이 붙는다. */
 }
+
+
+/** skip nav */
+
+.nav-skip a {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 160px;
+    line-height: 30px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-align: center;
+    background-color: #333333;
+}
+
+.nav-skip a:active,
+.nav-skip a:focus {
+    top: 0;
+}
+
 
 /* 컨테이너 스타일 */
 
@@ -42,7 +71,9 @@
     /*background-color: #E5E5E5;*/
 }
 
+
 /*container-movie의 자식 요소이므로 다음과 같이 선택 */
+
 .container-movie .title-container {
     font-size: 24px;
     text-align: center;
@@ -50,13 +81,16 @@
     padding: 38px 0;
 }
 
+
 /* nav 스타일 */
+
 .container-movie .nav-movie {
     text-align: center;
-
 }
 
+
 /* 가상 요소를 사용하여 상위 라인 */
+
 .container-movie .nav-movie::before {
     display: block;
     content: '';
@@ -71,17 +105,23 @@
     margin: 27px 0;
 }
 
+
 /* flex 대신에 float 를 활용하여, 적용 */
+
 .container-movie .list-movie-nav li {
     float: left;
 }
 
+
 /* 간격을 조절하기 위한 스타일 +는 요소 옆에 있는 태그에만 적용이 되게 된다.*/
-.container-movie .list-movie-nav li + li {
+
+.container-movie .list-movie-nav li+li {
     margin-left: 60px;
 }
 
+
 /**/
+
 .container-movie .list-movie-nav .link-nav {
     color: #828282;
 }
@@ -91,7 +131,9 @@
     font-weight: bold;
 }
 
+
 /* CONTENT STYLE */
+
 .container-movie .list-movieInfo {
     /*plot 을 통해서 가로 정렬 시 자식 요소를 알아보기 위해서 */
     overflow: hidden;
@@ -115,8 +157,10 @@
     margin: 24px 12px 0;
 }
 
+
 /* class 에 link 가 있는 것만 선택하는 선택자 */
-.container-movie .list-movieInfo li > a[class^="link"] {
+
+.container-movie .list-movieInfo li>a[class^="link"] {
     display: inline-block;
     float: left;
     width: 50%;
@@ -144,7 +188,6 @@
     background-image: url("../images/btn_play.png");
     vertical-align: top;
     margin: 11px 2px 0 0;
-
 }
 
 .container-movie .list-movieInfo li .link-movie {
@@ -161,7 +204,8 @@
     padding: 19px 19px 0 19px;
 }
 
-.list-movieInfo .list-info dt, .list-movieInfo .list-info dd {
+.list-movieInfo .list-info dt,
+.list-movieInfo .list-info dd {
     display: inline-block;
     font-size: 14px;
     vertical-align: top;
@@ -184,7 +228,7 @@
     float: right;
 }
 
-.list-movieInfo .list-info .item-star dt::after{
+.list-movieInfo .list-info .item-star dt::after {
     content: '';
     display: inline-block;
     width: 14px;
@@ -194,7 +238,108 @@
     vertical-align: top;
 }
 
-.list-movieInfo .list-info div{
+.list-movieInfo .list-info div {
     display: inline-block;
     margin-bottom: 5px;
+}
+
+
+/** Footer Design */
+
+.cont-company {
+    background-color: #f2f2f2;
+    margin-top: 135px;
+}
+
+.cont-company .cont-coInfo {
+    /** sns link를 위로 올리기 위해서 부모의 값을 기준으로 하게 하기 위한 설정이다. */
+    position: relative;
+    overflow: hidden;
+    width: 1189px;
+    /** 가운데 정렬을 해주는 것이다.*/
+    margin: 0 auto;
+}
+
+.cont-company .title-company {
+    display: block;
+    font-size: 22px;
+    height: 118px;
+    line-height: 118px;
+    border-bottom: 2px solid #c4c4c4;
+    font-weight: 700;
+}
+
+.cont-company .list-coInfo {
+    float: left;
+    margin: 38px 0;
+}
+
+.cont-company .list-coInfo dt,
+.cont-company .list-coInfo dd {
+    display: inline-block;
+    float: left;
+}
+
+.cont-company .list-coInfo dt {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.cont-company .list-coInfo dd {
+    font-weight: 400;
+}
+
+.cont-company .list-coInfo dd:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 7px;
+    background-color: #000000;
+}
+
+.cont-company .list-coInfo dd:last-child::after {
+    display: none;
+}
+
+.cont-company .list-sns {
+    position: absolute;
+    overflow: hidden;
+    top: 50px;
+    right: 0px;
+}
+
+.cont-company .list-sns li {
+    float: left;
+    margin-left: 22px;
+}
+
+
+/** a tag 의 클래스의 prefix가 link인 것만 스타일링 적용 */
+
+.cont-company .list-sns a[class^="link"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size: 1px;
+    /** 내어쓰기 설정 하는 것 */
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+.cont-company .list-sns .link-twitter {
+    background-image: url("../images/twitter.png");
+}
+
+.cont-company .list-sns .link-instargram {
+    background-image: url("../images/instagram.png");
+}
+
+.cont-company .list-sns .link-facebook {
+    background-image: url("../images/facebook.png");
+}
+
+.cont-company .text-copy {
+    float: right;
+    margin-top: 38px;
 }

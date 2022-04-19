@@ -11,12 +11,17 @@
 </head>
 
 <body>
+    <div class="nav-skip">
+        <a href="#cont-nav">영화목록 바로가기</a>
+        <a href="#cont-company">회사 정보 바로가기</a>
+    </div>
+    <!--  -->
     <h1 class="sr-only">정글 시네마</h1>
     <section class="container-movie">
         <h2 class="title-container">정글 시네마 영화 목록</h2>
         <header>
             <h3 class="sr-only">영화 정보 목록</h3>
-            <nav class="nav-movie">
+            <nav id="cont-nav" class="nav-movie">
                 <ul class="list-movie-nav">
                     <li class="active"><a href="#none" class="link-nav">현재 상영 영화</a></li>
                     <li><a href="#none" class="link-nav">개봉 예정 영화</a></li>
@@ -67,17 +72,21 @@
                     <a href="#none" class="link-reserv">예매하기</a>
                     <a href="#none" class="link-teaser">예고편</a>
                 </li>
+                <!-- ./li -->
+                <!-- 하나의 카드 요소 -->
+
             </ul>
         </section>
         <!-- ./section -->
+
     </section>
     <!-- main 요소는 익스 플로어에서 지원을 하지 않는다. -->
-    <footer>
-        <section>
-            <h2>기업 정보</h2>
-            <strong>Jungle Cinema</strong>
-            <dl>
-                <dt>사명</dt>
+    <footer id="cont-company" class="cont-company">
+        <section class="cont-coInfo">
+            <h2 class="sr-only">기업 정보</h2>
+            <strong class="title-company">Jungle Cinema</strong>
+            <dl class="list-coInfo">
+                <dt class="sr-only">사명</dt>
                 <dd>(주) 정글 시네마</dd>
                 <dt>대표</dt>
                 <dd>라이켓</dd>
@@ -88,18 +97,18 @@
                 <dd>제주특별 자치도</dd>
             </dl>
             <!--./company-introduce-->
-            <em>sns 링 목록</em>
+            <em class="sr-only">sns 링 목록</em>
             <!---->
-            <ul>
+            <ul class="list-sns">
                 <li>
-                    <a href="#none">트위처</a>
-                    <a href="#none">인스타그램</a>
-                    <a href="#none">페이스북</a>
+                    <a href="#none" class="link-twitter ">트위터</a>
+                    <a href="#none" class="link-instargram">인스타그램</a>
+                    <a href="#none" class="link-facebook">페이스북</a>
                 </li>
                 <!--./sns link-->
             </ul>
             <!--./-->
-            <small>Copyright &copy;The Jungle. All rights Reserved.</small>
+            <small class="text-copy">Copyright &copy;The Jungle. All rights Reserved.</small>
             <!--저작권 정보를 나타낼 때 일반적으로 small 태그를 사용해서 나타낸다.-->
         </section>
     </footer>
